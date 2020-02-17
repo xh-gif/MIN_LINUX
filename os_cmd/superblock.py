@@ -1,4 +1,3 @@
-from sys import getsizeof
 
 
 class SuperBlock(object):

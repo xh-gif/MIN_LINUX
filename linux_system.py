@@ -1,5 +1,45 @@
 
+<<<<<<< Updated upstream
 
+=======
+# from os_cmd import command
+# from multiprocessing.connection import Listener, wait
+# import threading
+# import time
+
+
+# def main():
+#
+#     fsm = command.filesys()
+#
+#     address = ('localhost', 7000)
+#
+#     print('Listening:', address[0])
+#
+#     while True:
+#
+#         with Listener(address, authkey=b'secret password') as listener:
+#
+#             with listener.accept() as conn:
+#
+#                 print('connection accepted from', listener.last_accepted)
+#
+#                 msg = conn.recv()
+#                 print('-------------')
+#                 print(msg)
+#                 print(type(msg))
+#                 print('------------')
+#                 fsm.in_com(msg)
+#
+#                 result = fsm.out_com()
+#
+#                 conn.send(result)
+#
+# print('-----')
+# if __name__ == '__main__':
+#
+#     main()
+>>>>>>> Stashed changes
 from multiprocessing import Process
 from os_cmd import command
 from multiprocessing.connection import Listener, wait
@@ -89,6 +129,11 @@ def p1(s):
         p2 = Process(target=pp, name='p2', args=(a,))
         p2.start()
 
+<<<<<<< Updated upstream
+=======
+
+print('-----')
+>>>>>>> Stashed changes
 if __name__ == '__main__':
     k = 0
     location = '/'
@@ -98,4 +143,8 @@ if __name__ == '__main__':
         p1 = Process(target=main, name='p1')
         p1.start()
     while True:
+<<<<<<< Updated upstream
         next(a)
+=======
+        next(a)
+>>>>>>> Stashed changes

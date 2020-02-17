@@ -1,4 +1,4 @@
-
+from os_cmd.superblock import Inode_Block
 def aa(s,i,sf):
     if i > 0:
         i -= 1
@@ -31,6 +31,8 @@ def bb(s,i,sf,vvv,a): #在当前目录sf下创建目录vvv，s为总目录结构
         if a:
             s.append([vvv])
         else:
+            d = Inode_Block.get_inode_index(vvv)
+            vvv = vvv + ' ' + d
             s.append(vvv)
         return s
 

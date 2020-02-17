@@ -1,5 +1,5 @@
 from os_cmd.method_dir_file import *
-
+from os_cmd.superblock import SuperBlock
 class filesys(object):
     def __init__(self):
         self.cmds = {    'initial':self.cur_dir,
@@ -15,7 +15,8 @@ class filesys(object):
         self.dir0 = ['/',['bin'],['etc'],['lib'],['root'],['home'],['sys'],['usr'],
                      ['sbin'],['boot'],['mnt'],['proc'],['srv'],['var'],['dev']]
         print('difhuuifads')
-
+        self.Superblock = SuperBlock
+        
     def in_com(self,msg):
         self.a(msg)
         self.disptch()
